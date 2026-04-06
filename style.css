@@ -1,0 +1,35 @@
+body{ font-family: Great Vibes;
+    margin: 0;
+    
+    line-height:1.6;
+
+}
+header{background-color:#462929 ;
+color: white;
+padding: 20px;
+text-align:center;
+
+}
+header.logo{
+    margin: 0;
+    font-size:2;
+
+}
+nav {
+    border-top: #462929;
+    color:white ;
+    text-decoration: none;
+    margin: 15px;
+
+}
+.lll {
+    width: 150px;
+    height: 150px;
+   display: flex;
+   justify-content: center;
+}
+
+.uscon{
+    display: flex;
+    text-align: left;
+}
