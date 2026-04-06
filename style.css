@@ -1,82 +1,205 @@
-body{ font-family: Great Vibes;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
     margin: 0;
-    
-    line-height:1.6;
-
+    padding: 0;
 }
-header{background-color:#462929 ;
-color: white;
-padding: 20px;
-text-align:center;
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f3ee;
+    color: #3e2c23;
+    line-height: 1.6;
 }
-header .logo{
-    margin: 0;
 
+/* HEADER */
+header {
+    background: linear-gradient(180deg, #5c3b2e, #7a5240);
+    color: white;
+    text-align: center;
+    padding: 30px 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
+.logo h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+/* NAV */
 nav {
-    border-top: #462929;
-    color:white ;
-    text-decoration: none;
-    margin: 15px;
-
+    margin-top: 20px;
 }
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin: 8px 12px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.12);
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+    transform: translateY(-2px);
+}
+
+/* HERO IMAGE */
 .lll {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    padding: 30px 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
 }
 
 .lll img {
-    max-width: 90%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.92);
 }
 
-.uscon{
-    justify-content: left;
+/* SECTIONS */
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
 }
-.uscon h1{
+
+/* ABOUT */
+.con {
+    background-color: #fffaf6;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(90, 60, 40, 0.08);
+}
+
+.uscon {
+    display: block;
+}
+
+.uscon h2 {
+    font-size: 34px;
+    color: #6b4637;
+    margin-bottom: 15px;
     text-align: center;
 }
-.meenu{padding: 50px;
-    text-align: center;
-    
-}
-.meenuss {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    text-align: center;     
-    margin: 40px auto;
-    max-width: 600px;
-}
 
-.meenuss img {
-    width: 250px;
-    height: 180px;
-    border-radius: 15px;
-    margin: 15px 0;
-}
-
-.meenuss h4 {
-    margin: 10px 0 5px;
-}
-
-.meenuss p {
+.uscon h3 {
+    font-size: 22px;
     margin-bottom: 20px;
-    font-weight: 600;
+    color: #8b5e4a;
+    text-align: center;
 }
 
-.meenuss{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
+.uscon p {
+    font-size: 17px;
+    color: #4a382f;
+    text-align: justify;
 }
-footer{
-    background-color: #8D5656;
-    padding: 50px;
+
+/* MENU */
+.menus h2 {
     text-align: center;
-    color: #000;
+    font-size: 32px;
+    color: #6b4637;
+    margin: 40px 0 25px;
+}
+
+.meenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.meenu img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    background-color: #e8ddd5;
+}
+
+.meenu h4 {
+    font-size: 18px;
+    color: #5a392c;
+    margin-top: 12px;
+}
+
+.meenu p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #9a5f3f;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* Щоб кожен елемент меню виглядав як картка */
+.meenu h4,
+.meenu p,
+.meenu img {
+    background-color: #fffaf6;
+}
+
+.meenu img,
+.meenu h4,
+.meenu p {
+    padding-left: 0;
+}
+
+/* Якщо захочеш справжні карточки, краще змінити HTML,
+   але навіть так уже буде приємніше виглядати */
+
+/* FOOTER */
+footer {
+    background: linear-gradient(180deg, #6a4537, #4d3228);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+footer h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+#meri {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f7d9c4;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
 }
